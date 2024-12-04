@@ -1,27 +1,24 @@
 import { type JSX } from "react";
 
 export function Card({
-  className,
+  
   title,
   children,
-  href,
+  
 }: {
-  className?: string;
+  
   title: string;
   children: React.ReactNode;
-  href: string;
+  
 }): JSX.Element {
   return (
-    <a
-      className={className}
-      href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <h2>
-        {title} <span>-&gt;</span>
-      </h2>
-      <p>{children}</p>
-    </a>
-  );
+    <div className="flex flex-col bg-white z-20 border border-gray-400 rounded-md py-4 px-4 mt-2 w-[40vw] ">
+      <h1 className="text-center font-bold text-purple-500 text-2xl">
+        {title}
+        </h1>
+        {children}
+
+
+    </div>
+  )
 }
